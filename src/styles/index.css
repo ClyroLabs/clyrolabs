@@ -1354,36 +1354,47 @@ body {
     border: 1px solid transparent;
 }
 
-.feature-row:hover {
-    background: rgba(255, 255, 255, 0.02);
-    border-color: rgba(255, 255, 255, 0.05);
+.feature-row:hover,
+.feature-row:active {
+    background: rgba(255, 255, 255, 0.05);
+    /* Slightly brighter base */
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
 .feature-row.visionz-row {
     background: radial-gradient(circle at 70% 50%, rgba(236, 72, 153, 0.05), transparent 60%);
 }
 
-.feature-row.visionz-row:hover {
-    background: radial-gradient(circle at 70% 50%, rgba(236, 72, 153, 0.08), transparent 60%);
-    border-color: rgba(236, 72, 153, 0.1);
+.feature-row.visionz-row:hover,
+.feature-row.visionz-row:active {
+    background: radial-gradient(circle at 70% 50%, rgba(236, 72, 153, 0.25), transparent 70%);
+    /* Stronger Pink */
+    border-color: rgba(236, 72, 153, 0.4);
+    box-shadow: 0 0 30px rgba(236, 72, 153, 0.15);
 }
 
 .feature-row.jukebox-row {
     background: radial-gradient(circle at 30% 50%, rgba(168, 85, 247, 0.05), transparent 60%);
 }
 
-.feature-row.jukebox-row:hover {
-    background: radial-gradient(circle at 30% 50%, rgba(168, 85, 247, 0.08), transparent 60%);
-    border-color: rgba(168, 85, 247, 0.1);
+.feature-row.jukebox-row:hover,
+.feature-row.jukebox-row:active {
+    background: radial-gradient(circle at 30% 50%, rgba(168, 85, 247, 0.25), transparent 70%);
+    /* Stronger Purple */
+    border-color: rgba(168, 85, 247, 0.4);
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.15);
 }
 
 .feature-row.synth-row {
     background: radial-gradient(circle at 70% 50%, rgba(59, 130, 246, 0.05), transparent 60%);
 }
 
-.feature-row.synth-row:hover {
-    background: radial-gradient(circle at 70% 50%, rgba(59, 130, 246, 0.08), transparent 60%);
-    border-color: rgba(59, 130, 246, 0.1);
+.feature-row.synth-row:hover,
+.feature-row.synth-row:active {
+    background: radial-gradient(circle at 70% 50%, rgba(59, 130, 246, 0.25), transparent 70%);
+    /* Stronger Blue */
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.15);
 }
 
 .feature-row.reverse .feature-content {
