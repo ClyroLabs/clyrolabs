@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Clyro Labs - Inovação Além do Horizonte. Computação Quântica, Inteligência Artificial e Telemedicina para um futuro melhor.">
+    <meta name="keywords"
+        content="IA, Inteligência Artificial, Computação Quântica, Telemedicina, Inovação, Tecnologia">
+    <meta name="author" content="Clyro Labs">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Clyro Labs - Inovação Além do Horizonte">
+    <meta property="og:description"
+        content="Computação Quântica, IA e Telemedicina para um futuro melhor e mais acessível.">
+    <meta property="og:type" content="website">
+
+    <title>Clyro Labs - Inovação Além do Horizonte</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/src/styles/index.css">
+    <link rel="stylesheet" href="/src/styles/temp_css_fix.css">
+</head>
+
+<body>
+    <!-- Particle Canvas Background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Header / Navbar -->
+    <header class="header-main" id="navbar">
+        <div class="header-container">
+            <div class="header-content">
+
+                <!-- Logo Section -->
+                <div class="header-logo-wrapper">
+                    <a href="/" aria-label="Clyro Labs - Página Inicial" class="header-logo-link">
+                        <div class="logo-glow-container header-logo-container">
+                            <div class="logo-glow-ring static"></div>
+                            <img class="styled-logo" src="/src/assets/images/clyro-labs-logo-final.png"
+                                alt="Logo Clyro Labs">
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="header-nav" id="nav-menu">
+                    <a href="#inicio" class="header-nav-link">Início</a>
+                    <a href="#solucoes" class="header-nav-link">Soluções</a>
+                    <a href="#estudio" class="header-nav-link">Estúdio App's</a>
+                    <a href="#sobre" class="header-nav-link">Sobre</a>
+                    <a href="#contato" class="header-nav-link">Contato</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="header-cta">
+                    <a href="#contato" class="header-cta-btn">
+                        Começar Agora
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="header-mobile-btn">
+                    <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-expanded="false"
+                        aria-label="Abrir menu principal">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <!-- Background Video -->
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="/clyroengineia.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos HTML5.
+        </video>
+        <!-- Overlay -->
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-badge animate-fade-up">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                    </svg>
+                    Bem-vindo ao Futuro da Tecnologia
+                </span>
+                <h1 class="hero-title animate-fade-up delay-1">
+                    Transformando<br>o <span class="text-blink-glow">Impossível</span><br>em Realidade
+                </h1>
+                <p class="hero-description animate-fade-up delay-2">
+                    A Clyro é especializada em Inteligência Artificial, Computação Quântica, Telemedicina e SaaS. E tem
+                    como propósito maior, transformar o impossível em realidade através de soluções inovadoras e
+                    acessíveis.
+                </p>
+                <div class="hero-actions animate-fade-up delay-3">
+                    <a href="#solucoes" class="btn btn-primary btn-lg">
+                        Explorar Soluções
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14" />
+                            <path d="m12 5 7 7-7 7" />
+                        </svg>
+                    </a>
+                    <a href="#sobre" class="btn btn-outline btn-lg">Saiba Mais</a>
+                </div>
+            </div>
+
+            <!-- Dragon Hologram -->
+            <div class="hero-image animate-fade-up delay-2">
+                <div class="hologram-container">
+                    <div class="hologram-frame">
+                        <img src="/dragon-hologram.jpg" alt="Dragon Hologram - Clyro Labs Innovation"
+                            class="hologram-image" loading="lazy" decoding="async">
+                        <div class="hologram-overlay"></div>
+                        <div class="hologram-scanline"></div>
+                        <div class="hologram-glow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="hero-stats animate-fade-up delay-4">
+                <div class="scroll-indicator-container">
+                    <div class="scroll-mouse">
+                        <div class="scroll-wheel"></div>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                                <polyline points="16 7 22 7 22 13"></polyline>
+                            </svg>
+                        </div>
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Projetos Ativos</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <span class="stat-number">5K+</span>
+                        <span class="stat-label">Usuários</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Suporte</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                        </div>
+                        <span class="stat-number">99.9%</span>
+                        <span class="stat-label">Uptime</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-glow"></div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="sobre">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <h2 class="section-title">Sobre a <span class="text-gradient">Clyro AI Labs</span></h2>
+                <p class="section-description">
+                    Somos pioneiros na revolução tecnológica, combinando IA de ponta, computação quântica e soluções de
+                    saúde digital para criar um futuro melhor e mais acessível para todos.
+                </p>
+            </div>
+
+            <div class="pillars-grid">
+                <!-- Pilar 1: Computação Quântica -->
+                <div class="pillar-card animate-fade-up delay-1">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="24" r="6" stroke="currentColor" stroke-width="2" />
+                            <ellipse cx="24" cy="24" rx="22" ry="10" stroke="currentColor" stroke-width="2"
+                                transform="rotate(60 24 24)" />
+                            <ellipse cx="24" cy="24" rx="22" ry="10" stroke="currentColor" stroke-width="2"
+                                transform="rotate(-60 24 24)" />
+                            <ellipse cx="24" cy="24" rx="22" ry="10" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title">Computação Quântica</h3>
+                    <p class="pillar-description">
+                        Liderando a revolução quântica com tecnologia que processa informações exponencialmente mais
+                        rápido, desbloqueando possibilidades antes impossíveis.
+                    </p>
+                </div>
+
+                <!-- Pilar 2: Inteligência Artificial -->
+                <div class="pillar-card animate-fade-up delay-2">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="8" width="32" height="32" rx="4" stroke="currentColor" stroke-width="2" />
+                            <circle cx="16" cy="16" r="2" fill="currentColor" />
+                            <circle cx="24" cy="16" r="2" fill="currentColor" />
+                            <circle cx="32" cy="16" r="2" fill="currentColor" />
+                            <circle cx="16" cy="24" r="2" fill="currentColor" />
+                            <circle cx="24" cy="24" r="2" fill="currentColor" />
+                            <circle cx="32" cy="24" r="2" fill="currentColor" />
+                            <circle cx="16" cy="32" r="2" fill="currentColor" />
+                            <circle cx="24" cy="32" r="2" fill="currentColor" />
+                            <circle cx="32" cy="32" r="2" fill="currentColor" />
+                            <path
+                                d="M16 16L24 24M24 16L16 24M24 16L32 24M32 16L24 24M16 24L24 32M24 24L16 32M24 24L32 32M32 24L24 32"
+                                stroke="currentColor" stroke-width="1" />
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title">Inteligência Artificial</h3>
+                    <p class="pillar-description">
+                        Nossa biblioteca alimentada por IA abriga apps e serviços inteligentes que aprendem e se adaptam
+                        às suas necessidades em tempo real.
+                    </p>
+                </div>
+
+                <!-- Pilar 3: Telemedicina -->
+                <div class="pillar-card animate-fade-up delay-3">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24 42C24 42 40 32 40 20C40 14 35 8 28 8C25 8 24 10 24 10C24 10 23 8 20 8C13 8 8 14 8 20C8 32 24 42 24 42Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M20 24H28" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <path d="M24 20V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title">Telemedicina</h3>
+                    <p class="pillar-description">
+                        Clyro Med oferece uma plataforma completa de saúde digital, conectando pacientes a profissionais
+                        com tecnologia de ponta e cuidado humanizado.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="solutions" id="solucoes">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <h2 class="section-title">Nossas <span class="text-gradient">Soluções</span></h2>
+                <p class="section-description">
+                    Produtos inovadores que combinam tecnologia de ponta com design intuitivo para transformar a maneira
+                    como você interage com o mundo digital.
+                </p>
+            </div>
+
+            <div class="solutions-features">
+                <!-- Clyro VisionZ (Pink) -->
+                <div class="feature-row visionz-row animate-fade-up">
+                    <div class="feature-content">
+                        <div class="feature-badge visionz">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            Entertainment 3.0
+                        </div>
+                        <h3 class="feature-title">Clyro <span class="text-glow-pink">VisionZ</span></h3>
+                        <p class="feature-description">
+                            Redefinindo o entretenimento digital. Uma fusão inédita de <strong
+                                class="text-highlight-pink">streaming on-demand</strong>, gamificação imersiva e
+                            recompensas
+                            Web3, tudo impulsionado pela computação quântica para uma experiência sem latência.
+                        </p>
+                        <ul class="feature-list">
+                            <li>Cinema imersivo 8K</li>
+                            <li>Recompensas Tokenizadas</li>
+                            <li>Interatividade em Tempo Real</li>
+                            <li>Ecossistema VR/AR Nativo</li>
+                        </ul>
+                        <a href="#" class="btn btn-cyan btn-pink-glow">
+                            <span>Explorar VisionZ</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14" />
+                                <path d="m12 5 7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="feature-image-container tilt-effect" data-color="#ec4899">
+                        <img src="/src/assets/images/visionz.jpg" alt="Clyro VisionZ Entertainment"
+                            class="feature-img-asset" loading="lazy" decoding="async"
+                            onerror="this.onerror=null;this.src='/src/assets/images/visionz.jpeg';">
+                        <div class="glow-effect bg-glow-pink">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clyro Jukebox (Purple) -->
+                <div class="feature-row jukebox-row reverse animate-fade-up">
+                    <div class="feature-content">
+                        <div class="feature-badge jukebox">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M9 18V5l12-2v13"></path>
+                                <circle cx="6" cy="18" r="3"></circle>
+                                <circle cx="18" cy="16" r="3"></circle>
+                            </svg>
+                            AI Audio Symphony
+                        </div>
+                        <h3 class="feature-title">Clyro <span class="text-glow-purple">Jukebox</span></h3>
+                        <p class="feature-description">
+                            A sinfonia da inteligência artificial. Mergulhe em paisagens sonoras infinitas, onde <strong
+                                class="text-highlight-purple">algoritmos neurais</strong> compõem e curam a trilha
+                            sonora
+                            perfeita para cada milissegundo da sua vida.
+                        </p>
+                        <ul class="feature-list">
+                            <li>Curadoria Neural Profunda</li>
+                            <li>Áudio Espacial 360°</li>
+                            <li>Composição Generativa</li>
+                            <li>Alta Fidelidade Lossless</li>
+                        </ul>
+                        <a href="#" class="btn btn-cyan btn-purple-glow">
+                            <span>Ouvir o Futuro</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14" />
+                                <path d="m12 5 7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="feature-image-container tilt-effect" data-color="#a855f7">
+                        <img src="/src/assets/images/jukebox.jpeg" alt="Clyro Jukebox AI" class="feature-img-asset"
+                            loading="lazy" decoding="async">
+                        <div class="glow-effect bg-glow-purple">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clyro Synth (Blue) -->
+                <div class="feature-row synth-row animate-fade-up">
+                    <div class="feature-content">
+                        <div class="feature-badge synth">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M23 7l-7 5 7 5V7z"></path>
+                                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                            </svg>
+                            Ultimate Audiovisual
+                        </div>
+                        <h3 class="feature-title">Clyro <span class="text-glow-blue">Synth</span></h3>
+                        <p class="feature-description">
+                            Alquimia audiovisual em tempo real. Transforme pensamentos abstratos em <strong
+                                class="text-highlight-blue">produções cinematográficas</strong> de tirar o fôlego com a
+                            nossa engine de síntese generativa ultra-realista.
+                        </p>
+                        <ul class="feature-list">
+                            <li>Renderização Neural Real-time</li>
+                            <li>VFX de Hollywood Instantâneo</li>
+                            <li>Dublagem e Lip-sync IA</li>
+                            <li>Exportação Multiformato</li>
+                        </ul>
+                        <a href="#" class="btn btn-cyan btn-blue-glow">
+                            <span>Criar Agora</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14" />
+                                <path d="m12 5 7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="feature-image-container tilt-effect pulse-blue" data-color="#3b82f6">
+                        <img src="/src/assets/images/synth.png" alt="Clyro Synth Art" class="feature-img-asset"
+                            loading="lazy" decoding="async">
+                        <div class="glow-effect bg-glow-blue">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estúdio App's Section -->
+    <section class="studio-apps" id="estudio">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <h2 class="section-title">Estúdio <span class="text-gradient">Apps</span></h2>
+                <p class="section-description">
+                    Uma coleção de ferramentas poderosas projetadas para potencializar sua produtividade e criatividade
+                    com o poder da IA.
+                </p>
+            </div>
+
+            <div class="apps-grid animate-fade-up delay-1">
+                <!-- Koda Card -->
+                <div class="app-card premium-card">
+                    <div class="app-icon-wrapper">
+                        <img src="/src/assets/images/koda-logo-new.png" alt="Koda Logo" class="app-logo-img koda-logo">
+                    </div>
+                    <h3 class="app-title">Koda</h3>
+                    <p class="app-subtitle">Sistemas de Aprendizagem de Elite</p>
+                    <p class="app-description">
+                        Ecossistema educacional avançado focado na tríade tecnológica do futuro: Inteligência
+                        Artificial, Web3 e Computação Quântica. Uma plataforma robusta desenhada para líderes da nova
+                        era digital.
+                    </p>
+                    <a href="#" class="app-link">Explorar Ecossistema →</a>
+                </div>
+
+                <!-- StudioX Card -->
+                <div class="app-card premium-card">
+                    <div class="app-icon-wrapper">
+                        <img src="/src/assets/images/studiox-logo-new.png" alt="StudioX Logo"
+                            class="app-logo-img studiox-logo">
+                    </div>
+                    <h3 class="app-title">StudioX</h3>
+                    <p class="app-subtitle">Engenharia de Frontend & IA</p>
+                    <p class="app-description">
+                        Suite completa para restauração de imagem e engenharia de áudio. Integra pipelines híbridos de
+                        Diffusion-GAN e motores de isolamento espectral para transformar inputs brutos em ativos de
+                        qualidade cinematográfica.
+                    </p>
+                    <a href="#" class="app-link">Acessar StudioX →</a>
+                </div>
+
+                <!-- Clyro Finanças Card -->
+                <div class="app-card premium-card">
+                    <div class="app-icon-wrapper">
+                        <img src="/src/assets/images/clyro-financas-logo.png" alt="Clyro Finanças Logo"
+                            class="app-logo-img financas-logo">
+                    </div>
+                    <h3 class="app-title">Clyro Finanças</h3>
+                    <p class="app-subtitle">Inteligência Financeira Preditiva</p>
+                    <p class="app-description">
+                        Plataforma de gestão financeira alimentada por IA. Analise dados complexos e planeje com
+                        precisão algorítmica para obter clareza absoluta sobre seu patrimônio e decisões estratégicas.
+                    </p>
+                    <a href="#" class="app-link">Gerenciar Finanças →</a>
+                </div>
+
+                <!-- Clyro Med Card -->
+                <div class="app-card premium-card">
+                    <div class="app-icon-wrapper">
+                        <img src="/src/assets/images/clyro-med-logo-new.png" alt="Clyro Med Logo" class="app-logo-img">
+                    </div>
+                    <h3 class="app-title">Clyro Med</h3>
+                    <p class="app-subtitle">Saúde 4.0 & Telemedicina</p>
+                    <div class="app-description">
+                        Convergência entre cuidado médico e monitoramento de dados avançado. Insights automáticos de
+                        saúde, agendamento simplificado e perfis profissionais detalhados em uma interface responsiva de
+                        alta performance.
+                    </div>
+                    <a href="#" class="app-link">Conhecer Plataforma →</a>
+                </div>
+
+                <!-- MobiPass Card -->
+                <div class="app-card premium-card">
+                    <div class="app-icon-wrapper">
+                        <img src="/src/assets/images/mobipass-logo-new.png" alt="MobiPass Logo"
+                            class="app-logo-img mobipass-logo">
+                    </div>
+                    <h3 class="app-title">MobiPass</h3>
+                    <p class="app-subtitle">Passaporte de Mobilidade Global</p>
+                    <p class="app-description">
+                        Solução MaaS (Mobility as a Service) Private-First. Integração perfeita entre mobilidade urbana
+                        e redes de turismo premium, com foco em otimização de receita e experiência do usuário superior.
+                    </p>
+                    <a href="https://mobipass-investors.vercel.app/" target="_blank" rel="noopener noreferrer"
+                        class="app-link">Acessar MobiPass →</a>
+                </div>
+
+                <!-- Publik Card -->
+                <div class="app-card premium-card">
+                    <div class="app-icon-wrapper">
+                        <img src="/src/assets/images/publik-logo-new.png" alt="Publik Logo"
+                            class="app-logo-img publik-logo">
+                    </div>
+                    <h3 class="app-title">Publik</h3>
+                    <p class="app-subtitle">Automação de Marketing Neural</p>
+                    <div class="app-description">
+                        Extensão de inteligência focada em resultados de alto impacto. Automação multiplataforma e
+                        algoritmos de alocação dinâmica de orçamento para maximização de ROI. Criação, gestão e escala
+                        em um único clique.
+                    </div>
+                    <a href="#" class="app-link">Potencializar Resultados →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission" id="missao">
+        <div class="container">
+            <div class="mission-header animate-fade-up">
+                <div class="mission-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 6v6l4 2"></path>
+                    </svg>
+                    Nossa Missão
+                </div>
+                <h2 class="mission-title">
+                    Democratizar o Acesso<br>
+                    à <span class="text-gradient">Tecnologia de Ponta</span>
+                </h2>
+                <p class="mission-description">
+                    Capacitando indivíduos e organizações a construir, gerir e prosperar no universo digital. Nosso
+                    usuário é impulsionado por IA para criar soluções Web3 sofisticadas, sustentáveis e lucrativas,
+                    tornando a inovação acessível a todos.
+                </p>
+            </div>
+
+            <div class="mission-cards animate-fade-up delay-1">
+                <div class="mission-card">
+                    <div class="mission-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M2 12h20"></path>
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="mission-card-title">Acessibilidade</h3>
+                    <p class="mission-card-description">Tecnologia avançada ao alcance de todos</p>
+                </div>
+
+                <div class="mission-card">
+                    <div class="mission-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3 class="mission-card-title">Inovação</h3>
+                    <p class="mission-card-description">Soluções revolucionárias para o futuro</p>
+                </div>
+
+                <div class="mission-card">
+                    <div class="mission-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="6"></circle>
+                            <circle cx="12" cy="12" r="2"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="mission-card-title">Impacto</h3>
+                    <p class="mission-card-description">Transformando vidas através da tecnologia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contato">
+        <div class="container">
+            <div class="cta-card animate-fade-up">
+                <div class="cta-logo-wrapper">
+                    <div class="logo-glow-container logo-glow-lg">
+                        <div class="logo-glow-ring"></div>
+                        <img src="/src/assets/images/clyro-labs-logo-final.png" alt="Clyro Labs" class="styled-logo" />
+                    </div>
+                </div>
+
+                <!-- CTA Content -->
+                <h2 class="cta-title">
+                    Pronto para <span class="text-gradient">Transformar</span><br>seu Negócio?
+                </h2>
+                <p class="cta-description">
+                    Junte-se a milhares de empresas que já estão usando nossas soluções de IA para revolucionar suas
+                    operações
+                </p>
+
+                <!-- Email Form -->
+                <form class="cta-form" id="cta-form">
+                    <div class="cta-input-group">
+                        <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                            <path d="m2 7 10 7 10-7"></path>
+                        </svg>
+                        <input type="email" placeholder="seu@email.com" required class="cta-input">
+                        <button type="submit" class="btn-cta">
+                            Começar Agora
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14" />
+                                <path d="m12 5 7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Footer Text -->
+                <p class="cta-footer-text">Com 3 pontos, uma ideia vira negócio</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners">
+        <div class="container">
+            <h3 class="partners-title animate-fade-up">Parceiros e Integrações</h3>
+            <div class="partners-grid animate-fade-up delay-1">
+                <!-- Google Ads (G logo style) -->
+                <div class="partner-logo google-partner">
+                    <svg viewBox="0 0 24 24" class="partner-svg google-logo">
+                        <defs>
+                            <linearGradient id="google-hover-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#22c55e" stop-opacity="1" /> <!-- Green -->
+                                <stop offset="100%" stop-color="#ec4899" stop-opacity="1" /> <!-- Pink -->
+                            </linearGradient>
+                        </defs>
+                        <g class="google-paths">
+                            <path
+                                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                            <path
+                                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                            <path
+                                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                            <path
+                                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                        </g>
+                    </svg>
+                </div>
+
+                <!-- TikTok -->
+                <div class="partner-logo">
+                    <svg viewBox="0 0 24 24" class="partner-svg">
+                        <path
+                            d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+                    </svg>
+                </div>
+
+                <!-- YouTube -->
+                <div class="partner-logo">
+                    <svg viewBox="0 0 24 24" class="partner-svg">
+                        <path
+                            d="M23.5 6.14a3 3 0 0 0-2.12-2.12C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.52A3 3 0 0 0 .5 6.14C0 8 0 12 0 12s0 4 .5 6.14a3 3 0 0 0 2.12 2.12c1.88.52 9.38.52 9.38.52s7.5 0 9.38-.52a3 3 0 0 0 2.12-2.12C24 16 24 12 24 12s0-4-.5-6.14zM9.54 15.57V8.43L15.82 12l-6.28 3.57z" />
+                    </svg>
+                </div>
+
+                <!-- Amazon -->
+                <div class="partner-logo">
+                    <img src="/src/assets/images/amazon-logo.png" alt="Amazon" class="partner-img">
+                </div>
+
+                <!-- Oracle -->
+                <div class="partner-logo">
+                    <img src="/src/assets/images/oracle-logo.png" alt="Oracle" class="partner-img">
+                </div>
+
+                <!-- Founders Club -->
+                <div class="partner-logo">
+                    <img src="/src/assets/images/founders-club-logo.png" alt="Founders Club" class="partner-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo-link">
+                        <div class="logo-glow-container logo-glow-sm">
+                            <div class="logo-glow-ring"></div>
+                            <img src="/src/assets/images/clyro-labs-logo-final.png" alt="Clyro Labs"
+                                class="styled-logo" />
+                        </div>
+                    </a>
+                    <p class="footer-tagline text-effect-metallic">Inovação Além do Horizonte</p>
+                </div>
+
+                <div class="footer-links">
+                    <a href="/privacy.html" class="footer-link">Privacidade</a>
+                    <a href="/terms.html" class="footer-link">Termos de Uso</a>
+                </div>
+
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect width="4" height="12" x="2" y="9" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                            <path d="M9 18c-4.51 2-5-2-7-2" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 Clyro Labs. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fechar">&times;</button>
+            <h3 class="modal-title">Fale Conosco</h3>
+            <p class="modal-subtitle">Preencha os dados abaixo para que nossa equipe entre em contato.</p>
+
+            <form id="modal-form">
+                <input type="hidden" name="_subject" value="Novo Lead: Interesse Clyro Labs">
+                <div class="form-group">
+                    <label for="modal-email">Email</label>
+                    <input type="email" id="modal-email" name="Email_Corporativo" required readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="modal-name">Nome Completo</label>
+                    <input type="text" id="modal-name" name="Nome_Completo" placeholder="Seu nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="modal-phone">Telefone / WhatsApp</label>
+                    <input type="tel" id="modal-phone" name="Telefone_WhatsApp" placeholder="(XX) 9XXXX-XXXX" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="modal-message">Mensagem (Opcional)</label>
+                    <textarea id="modal-message" name="Mensagem_Detalhada" rows="3"
+                        placeholder="Como podemos ajudar?"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">
+                    Enviar Solicitação
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- WhatsApp Chatbot Widget -->
+    <div id="wa-widget" class="wa-widget">
+        <!-- Chat Window -->
+        <div class="wa-chat-window" id="wa-chat-window">
+            <div class="wa-header">
+                <div class="wa-avatar">
+                    <img src="/src/assets/images/clyro-labs-logo-final.png" alt="Clyro Bot">
+                    <div class="wa-status-dot"></div>
+                </div>
+                <div class="wa-header-info">
+                    <h4 class="wa-name">Clyro Assistant</h4>
+                    <span class="wa-status">Online agora</span>
+                </div>
+                <button class="wa-close-btn" id="wa-close-btn">&times;</button>
+            </div>
+            <div class="wa-body">
+                <div class="wa-message received">
+                    Olá! 👋 Sou o assistente virtual da Clyro Labs.
+                </div>
+                <div class="wa-message received">
+                    Como posso ajudar você a transformar seu negócio hoje?
+                </div>
+            </div>
+            <div class="wa-footer">
+                <a href="https://wa.me/5583996310882?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20o%20assistente%20da%20Clyro%20Labs."
+                    target="_blank" rel="noopener" class="btn btn-primary btn-sm wa-start-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                        </path>
+                    </svg>
+                    Iniciar Conversa
+                </a>
+            </div>
+        </div>
+
+        <!-- Floating Button -->
+        <button class="wa-float-btn" id="wa-float-btn" aria-label="Abrir Chat">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>
