@@ -2409,7 +2409,8 @@ body {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 280px;
+        width: 240px;
+        /* Reduced from 280px */
         height: 100vh;
         background: var(--bg-secondary);
         flex-direction: column;

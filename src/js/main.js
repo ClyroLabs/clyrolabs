@@ -34,7 +34,7 @@ mobileMenuBtn?.addEventListener('click', () => {
 });
 
 // Close menu when clicking a link
-navMenu?.querySelectorAll('.nav-link').forEach(link => {
+navMenu?.querySelectorAll('.header-nav-link').forEach(link => {
     link.addEventListener('click', () => {
         mobileMenuBtn.classList.remove('active');
         navMenu.classList.remove('active');
