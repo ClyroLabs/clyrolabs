@@ -351,7 +351,7 @@ body {
 /* Header Navigation */
 .header-nav {
     display: none;
-    gap: 2rem;
+    gap: 1.25rem;
     align-items: center;
 }
 
@@ -363,7 +363,7 @@ body {
 
 .header-nav-link {
     color: #d1d5db;
-    font-size: 1.125rem;
+    font-size: 0.875rem;
     font-weight: 500;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -373,10 +373,89 @@ body {
     color: #00e5ff;
 }
 
+/* Navigation Divider */
+.nav-divider {
+    width: 1px;
+    height: 20px;
+    background: rgba(148, 163, 184, 0.3);
+    margin: 0 0.5rem;
+}
+
+/* Product Highlight Links */
+.header-nav-highlight {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-highlight-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation: navDotPulse 2s ease-in-out infinite;
+}
+
+@keyframes navDotPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(1.2);
+    }
+}
+
+/* Clyro Med - Cyan Theme */
+.header-nav-clyro-med {
+    color: #06b6d4 !important;
+    background: rgba(6, 182, 212, 0.1);
+    border: 1px solid rgba(6, 182, 212, 0.3);
+}
+
+.header-nav-clyro-med .nav-highlight-dot {
+    background: #06b6d4;
+    box-shadow: 0 0 8px rgba(6, 182, 212, 0.6);
+}
+
+.header-nav-clyro-med:hover {
+    background: rgba(6, 182, 212, 0.2);
+    border-color: #06b6d4;
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+    transform: translateY(-2px);
+}
+
+/* MobiPass - Purple Theme */
+.header-nav-mobipass {
+    color: #a855f7 !important;
+    background: rgba(168, 85, 247, 0.1);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.header-nav-mobipass .nav-highlight-dot {
+    background: #a855f7;
+    box-shadow: 0 0 8px rgba(168, 85, 247, 0.6);
+}
+
+.header-nav-mobipass:hover {
+    background: rgba(168, 85, 247, 0.2);
+    border-color: #a855f7;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+    transform: translateY(-2px);
+}
+
 /* Header CTA Button */
 .header-cta {
     display: none;
     align-items: center;
+    margin-left: 1.5rem;
 }
 
 @media (min-width: 768px) {

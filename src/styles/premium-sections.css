@@ -1,0 +1,1405 @@
+/* ===============================================
+   PREMIUM SECTIONS - DEEP SPACE AESTHETICS
+   Clyro Labs 2026 - Quantum-Ready Design
+   =============================================== */
+
+/* =========================================
+   DEEP SPACE BACKGROUND & PARTICLES
+   ========================================= */
+
+.deep-space-section {
+    position: relative;
+    background: linear-gradient(180deg,
+            #0a0a0f 0%,
+            #0f0f1a 25%,
+            #1a1a2e 50%,
+            #16162b 75%,
+            #0a0a0f 100%);
+    overflow: hidden;
+    z-index: 1;
+    isolation: isolate;
+}
+
+/* Cyan gradient for Clyro Med section */
+.deep-space-section#clyro-med {
+    background: linear-gradient(180deg,
+            #0a1929 0%,
+            #0d2137 25%,
+            #0f3460 50%,
+            #0b2545 75%,
+            #091a2e 100%);
+}
+
+/* Black background for MobiPass section */
+.deep-space-section#mobipass {
+    background: #000000;
+}
+
+/* MobiPass logo - reduced brightness, increased contrast */
+#mobipass .product-logo {
+    filter: brightness(0.7) contrast(1.3) drop-shadow(0 0 8px rgba(168, 85, 247, 0.2));
+    animation: none;
+}
+
+/* Glassmorphism black/transparent for Conheça a Clyro */
+.deep-space-section#conheca-clyro {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.deep-space-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(2px 2px at 20% 30%, rgba(6, 182, 212, 0.4), transparent),
+        radial-gradient(2px 2px at 60% 70%, rgba(236, 72, 153, 0.3), transparent),
+        radial-gradient(1px 1px at 50% 50%, rgba(6, 182, 212, 0.2), transparent),
+        radial-gradient(1px 1px at 80% 10%, rgba(168, 85, 247, 0.2), transparent),
+        radial-gradient(2px 2px at 90% 60%, rgba(6, 182, 212, 0.3), transparent),
+        radial-gradient(1px 1px at 33% 80%, rgba(236, 72, 153, 0.2), transparent);
+    background-size: 200px 200px, 300px 300px, 150px 150px, 250px 250px, 180px 180px, 220px 220px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px, 150px 50px, 200px 180px;
+    animation: particle-drift 60s linear infinite;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+@keyframes particle-drift {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-50px, 100px);
+    }
+}
+
+.deep-space-section::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.08) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: core-pulse 8s ease-in-out infinite;
+}
+
+@keyframes core-pulse {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+}
+
+/* =========================================
+   LOGO PULSATION (REACTOR CORE)
+   ========================================= */
+
+@keyframes reactor-pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        filter: brightness(1.2) drop-shadow(0 0 20px rgba(6, 182, 212, 0.6));
+    }
+
+    50% {
+        transform: scale(1.08);
+        filter: brightness(1.6) drop-shadow(0 0 40px rgba(6, 182, 212, 1)) drop-shadow(0 0 60px rgba(236, 72, 153, 0.6));
+    }
+}
+
+.reactor-core-logo {
+    animation: reactor-pulse 3s ease-in-out infinite;
+}
+
+/* Fluorescent Blink Animation for Agent Core Title */
+@keyframes fluorescent-blink {
+
+    0%,
+    100% {
+        opacity: 1;
+        filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.6));
+    }
+
+    25% {
+        opacity: 0.85;
+        filter: drop-shadow(0 0 15px rgba(6, 182, 212, 0.9)) drop-shadow(0 0 20px rgba(168, 85, 247, 0.5));
+    }
+
+    50% {
+        opacity: 1;
+        filter: drop-shadow(0 0 25px rgba(6, 182, 212, 1)) drop-shadow(0 0 35px rgba(236, 72, 153, 0.7));
+    }
+
+    75% {
+        opacity: 0.9;
+        filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.8));
+    }
+}
+
+.fluorescent-blink {
+    animation: fluorescent-blink 2.5s ease-in-out infinite;
+    display: inline-block;
+}
+
+/* =========================================
+   AJAX FLOATING ANIMATION FOR ICONS
+   ========================================= */
+
+@keyframes icon-float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-8px) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(-8px) rotate(2deg);
+    }
+}
+
+/* Apply floating animation to card icons */
+.glass-card-icon {
+    animation: icon-float 3s ease-in-out infinite;
+}
+
+.core-tech-icon {
+    animation: icon-float 3.5s ease-in-out infinite;
+}
+
+.pillar-icon {
+    animation: icon-float 4s ease-in-out infinite;
+}
+
+.product-feature-icon {
+    animation: icon-float 3.2s ease-in-out infinite;
+}
+
+/* =========================================
+   BLUEPRINT / TECH DIAGRAM STYLES
+   ========================================= */
+
+.blueprint-container {
+    position: relative;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.03) 0%, rgba(15, 23, 42, 0.95) 100%);
+    border: 1px solid rgba(6, 182, 212, 0.2);
+    border-left: 3px solid #06b6d4;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    backdrop-filter: blur(12px);
+    position: relative;
+}
+
+.blueprint-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        repeating-linear-gradient(0deg, rgba(6, 182, 212, 0.03) 0px, transparent 1px, transparent 2px, rgba(6, 182, 212, 0.03) 3px),
+        repeating-linear-gradient(90deg, rgba(6, 182, 212, 0.03) 0px, transparent 1px, transparent 2px, rgba(6, 182, 212, 0.03) 3px);
+    background-size: 20px 20px;
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.tech-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(6, 182, 212, 0.1);
+    border: 1px solid rgba(6, 182, 212, 0.3);
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #06b6d4;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+/* =========================================
+   GLASSMORPHISM PREMIUM CARDS
+   ========================================= */
+
+.glass-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.1), transparent);
+    transition: left 0.6s;
+}
+
+.glass-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(6, 182, 212, 0.4);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(6, 182, 212, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.glass-card:hover::before {
+    left: 100%;
+}
+
+.glass-card-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(168, 85, 247, 0.2) 100%);
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.glass-card-icon svg {
+    width: 32px;
+    height: 32px;
+    color: #06b6d4;
+}
+
+.glass-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 0.75rem;
+    background: linear-gradient(135deg, #06b6d4 0%, #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.glass-card-description {
+    color: #cbd5e1;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Premium Button - Cyan */
+.btn-premium {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 2px solid transparent;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-premium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-premium:hover::before {
+    left: 100%;
+}
+
+.btn-premium:hover {
+    background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
+    box-shadow: 0 6px 25px rgba(6, 182, 212, 0.5), 0 0 30px rgba(6, 182, 212, 0.3);
+    transform: translateY(-2px);
+    border-color: rgba(6, 182, 212, 0.5);
+}
+
+.btn-premium svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.btn-premium:hover svg {
+    transform: translateX(4px);
+}
+
+/* Premium Button Outline - Cyan */
+.btn-outline-premium {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: transparent;
+    color: #06b6d4;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 2px solid #06b6d4;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-outline-premium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-outline-premium:hover::before {
+    left: 100%;
+}
+
+.btn-outline-premium:hover {
+    background: linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%);
+    color: #ffffff;
+    box-shadow: 0 6px 25px rgba(6, 182, 212, 0.4), 0 0 30px rgba(6, 182, 212, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-outline-premium svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.btn-outline-premium:hover svg {
+    transform: translateX(4px);
+}
+
+/* =========================================
+   ORBITAL CONSTELLATION SYSTEM (ISOLATED)
+   ========================================= */
+
+.orbital-constellation-container {
+    position: relative;
+    width: 100%;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem 0;
+}
+
+/* Central Core */
+.orbital-center {
+    position: relative;
+    z-index: 10;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+}
+
+.orbital-center-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 180px;
+    border: 2px solid rgba(6, 182, 212, 0.3);
+    border-radius: 50%;
+    animation: orbital-ring-pulse 3s ease-in-out infinite;
+}
+
+@keyframes orbital-ring-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(6, 182, 212, 0.4);
+    }
+}
+
+.orbital-center-core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 160px;
+    height: 160px;
+    background: radial-gradient(circle, rgba(6, 30, 51, 0.9) 0%, rgba(6, 30, 51, 0.6) 100%);
+    border: 3px solid rgba(6, 182, 212, 0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 40px rgba(6, 182, 212, 0.3), inset 0 0 30px rgba(6, 182, 212, 0.1);
+}
+
+.orbital-center-logo {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 15px rgba(6, 182, 212, 0.4));
+}
+
+.orbital-center-title {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #06b6d4;
+    margin-top: 1.5rem;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.orbital-center-subtitle {
+    position: absolute;
+    top: calc(100% + 3.5rem);
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    font-size: 0.95rem;
+    color: #94a3b8;
+    text-align: center;
+}
+
+/* Orbital System */
+.orbital-system {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Orbital Paths (invisible circles that contain the planets) */
+.orbital-path {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px dashed rgba(6, 182, 212, 0.15);
+    border-radius: 50%;
+    animation: orbital-rotate linear infinite;
+}
+
+.orbital-path-1 {
+    width: 320px;
+    height: 320px;
+    margin-left: -160px;
+    margin-top: -160px;
+    animation-duration: 25s;
+}
+
+.orbital-path-2 {
+    width: 400px;
+    height: 400px;
+    margin-left: -200px;
+    margin-top: -200px;
+    animation-duration: 30s;
+    animation-direction: reverse;
+}
+
+.orbital-path-3 {
+    width: 480px;
+    height: 480px;
+    margin-left: -240px;
+    margin-top: -240px;
+    animation-duration: 35s;
+}
+
+.orbital-path-4 {
+    width: 560px;
+    height: 560px;
+    margin-left: -280px;
+    margin-top: -280px;
+    animation-duration: 40s;
+    animation-direction: reverse;
+}
+
+.orbital-path-5 {
+    width: 380px;
+    height: 380px;
+    margin-left: -190px;
+    margin-top: -190px;
+    animation-duration: 28s;
+}
+
+.orbital-path-6 {
+    width: 440px;
+    height: 440px;
+    margin-left: -220px;
+    margin-top: -220px;
+    animation-duration: 32s;
+    animation-direction: reverse;
+}
+
+@keyframes orbital-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Planets (orbiting products) */
+.orbital-planet {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: all;
+}
+
+.orbital-planet-inner {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.85) 100%);
+    border: 2px solid rgba(6, 182, 212, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(6, 182, 212, 0.2);
+    transition: all 0.3s ease;
+    animation: orbital-planet-counter-rotate linear infinite;
+    cursor: pointer;
+}
+
+/* Counter-rotation to keep planets upright */
+.orbital-path-1 .orbital-planet-inner {
+    animation-duration: 25s;
+    animation-direction: reverse;
+}
+
+.orbital-path-2 .orbital-planet-inner {
+    animation-duration: 30s;
+}
+
+.orbital-path-3 .orbital-planet-inner {
+    animation-duration: 35s;
+    animation-direction: reverse;
+}
+
+.orbital-path-4 .orbital-planet-inner {
+    animation-duration: 40s;
+}
+
+.orbital-path-5 .orbital-planet-inner {
+    animation-duration: 28s;
+    animation-direction: reverse;
+}
+
+.orbital-path-6 .orbital-planet-inner {
+    animation-duration: 32s;
+}
+
+@keyframes orbital-planet-counter-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Generic hover base */
+.orbital-planet-inner:hover {
+    transform: scale(1.15);
+}
+
+.orbital-planet-logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.3));
+    transition: filter 0.3s ease;
+}
+
+/* Planet-specific styling with brand colors */
+.orbital-planet-1 .orbital-planet-inner {
+    border-color: rgba(6, 182, 212, 0.5);
+}
+
+.orbital-planet-1 .orbital-planet-inner:hover {
+    border-color: #06b6d4;
+    box-shadow: 0 8px 40px rgba(6, 182, 212, 0.6), 0 0 50px rgba(6, 182, 212, 0.4);
+}
+
+.orbital-planet-1:hover .orbital-planet-logo {
+    filter: drop-shadow(0 0 15px rgba(6, 182, 212, 0.8));
+}
+
+.orbital-planet-2 .orbital-planet-inner {
+    border-color: rgba(168, 85, 247, 0.5);
+}
+
+.orbital-planet-2 .orbital-planet-inner:hover {
+    border-color: #a855f7;
+    box-shadow: 0 8px 40px rgba(168, 85, 247, 0.6), 0 0 50px rgba(168, 85, 247, 0.4);
+}
+
+.orbital-planet-2:hover .orbital-planet-logo {
+    filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.8));
+}
+
+.orbital-planet-3 .orbital-planet-inner {
+    border-color: rgba(236, 72, 153, 0.5);
+}
+
+.orbital-planet-3 .orbital-planet-inner:hover {
+    border-color: #ec4899;
+    box-shadow: 0 8px 40px rgba(236, 72, 153, 0.6), 0 0 50px rgba(236, 72, 153, 0.4);
+}
+
+.orbital-planet-3:hover .orbital-planet-logo {
+    filter: drop-shadow(0 0 15px rgba(236, 72, 153, 0.8));
+}
+
+.orbital-planet-4 .orbital-planet-inner {
+    border-color: rgba(14, 165, 233, 0.5);
+}
+
+.orbital-planet-4 .orbital-planet-inner:hover {
+    border-color: #0ea5e9;
+    box-shadow: 0 8px 40px rgba(14, 165, 233, 0.6), 0 0 50px rgba(14, 165, 233, 0.4);
+}
+
+.orbital-planet-4:hover .orbital-planet-logo {
+    filter: drop-shadow(0 0 15px rgba(14, 165, 233, 0.8));
+}
+
+.orbital-planet-5 .orbital-planet-inner {
+    border-color: rgba(34, 211, 238, 0.5);
+}
+
+.orbital-planet-5 .orbital-planet-inner:hover {
+    border-color: #22d3ee;
+    box-shadow: 0 8px 40px rgba(34, 211, 238, 0.6), 0 0 50px rgba(34, 211, 238, 0.4);
+}
+
+.orbital-planet-5:hover .orbital-planet-logo {
+    filter: drop-shadow(0 0 15px rgba(34, 211, 238, 0.8));
+}
+
+.orbital-planet-6 .orbital-planet-inner {
+    border-color: rgba(59, 130, 246, 0.5);
+}
+
+.orbital-planet-6 .orbital-planet-inner:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 8px 40px rgba(59, 130, 246, 0.6), 0 0 50px rgba(59, 130, 246, 0.4);
+}
+
+.orbital-planet-6:hover .orbital-planet-logo {
+    filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.8));
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .orbital-constellation-container {
+        min-height: 500px;
+    }
+
+    .orbital-center-core {
+        width: 120px;
+        height: 120px;
+    }
+
+    .orbital-center-logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .orbital-path-1 {
+        width: 220px;
+        height: 220px;
+        margin-left: -110px;
+        margin-top: -110px;
+    }
+
+    .orbital-path-2 {
+        width: 300px;
+        height: 300px;
+        margin-left: -150px;
+        margin-top: -150px;
+    }
+
+    .orbital-path-3 {
+        width: 380px;
+        height: 380px;
+        margin-left: -190px;
+        margin-top: -190px;
+    }
+
+    .orbital-path-4 {
+        width: 460px;
+        height: 460px;
+        margin-left: -230px;
+        margin-top: -230px;
+    }
+
+    .orbital-planet-inner {
+        width: 80px;
+        height: 80px;
+    }
+
+    .orbital-planet-logo {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+/* END OF ORBITAL CONSTELLATION SYSTEM */
+
+/* =========================================
+   CONSTELLATION MAP (OLD - KEEPING FOR REFERENCE)
+   ========================================= */
+/* Constellation Map */
+.constellation-map {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+}
+
+.constellation-center {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+.constellation-center-logo {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 1.5rem;
+    padding: 1rem;
+    background: rgba(6, 30, 51, 0.6);
+    border: 3px solid rgba(6, 182, 212, 0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 40px rgba(6, 182, 212, 0.3);
+}
+
+.constellation-nodes {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.constellation-node {
+    position: absolute;
+    background: rgba(6, 30, 51, 0.8);
+    border: 2px solid rgba(6, 182, 212, 0.5);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Connection lines from nodes to center */
+.constellation-node::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(to right, rgba(6, 182, 212, 0.6), rgba(6, 182, 212, 0.1));
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Glowing dot at connection start */
+.constellation-node::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #06b6d4;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(6, 182, 212, 0.8);
+    animation: pulse-dot 2s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes pulse-dot {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(1.3);
+    }
+}
+
+/* Position each node in circular pattern */
+.constellation-nodes {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
+}
+
+.constellation-node:nth-child(1) {
+    /* Clyro Med - Top Left */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.constellation-node:nth-child(1)::before {
+    width: 250px;
+    left: 100%;
+    transform-origin: left center;
+    transform: rotate(-15deg);
+}
+
+.constellation-node:nth-child(1)::after {
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.constellation-node:nth-child(2) {
+    /* MobiPass - Top Right */
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.constellation-node:nth-child(2)::before {
+    width: 250px;
+    right: 100%;
+    transform-origin: right center;
+    transform: rotate(15deg);
+}
+
+.constellation-node:nth-child(2)::after {
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.constellation-node:nth-child(3) {
+    /* Agent Core - Bottom Left */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.constellation-node:nth-child(3)::before {
+    width: 250px;
+    left: 100%;
+    transform-origin: left center;
+    transform: rotate(15deg);
+}
+
+.constellation-node:nth-child(3)::after {
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.constellation-node:nth-child(4) {
+    /* Studio Apps - Bottom Right */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.constellation-node:nth-child(4)::before {
+    width: 250px;
+    right: 100%;
+    transform-origin: right center;
+    transform: rotate(-15deg);
+}
+
+.constellation-node:nth-child(4)::after {
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.constellation-node:hover {
+    border-color: #06b6d4;
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.4);
+}
+
+/* Posicionamento dos nodes orbitais */
+.constellation-node:nth-child(1) {
+    top: 10%;
+    left: 20%;
+}
+
+.constellation-node:nth-child(1)::before {
+    left: 100%;
+    width: 150px;
+}
+
+.constellation-node:nth-child(2) {
+    top: 15%;
+    right: 20%;
+}
+
+.constellation-node:nth-child(2)::before {
+    right: 100%;
+    width: 150px;
+}
+
+.constellation-node:nth-child(3) {
+    bottom: 20%;
+    left: 15%;
+}
+
+.constellation-node:nth-child(3)::before {
+    left: 100%;
+    width: 180px;
+}
+
+.constellation-node:nth-child(4) {
+    bottom: 15%;
+    right: 18%;
+}
+
+.constellation-node:nth-child(4)::before {
+    right: 100%;
+    width: 180px;
+}
+
+/* =========================================
+   SECTION HEADERS (PREMIUM)
+   ========================================= */
+
+.premium-section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.premium-section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%);
+    border: 1px solid rgba(6, 182, 212, 0.3);
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #06b6d4;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+    animation: badge-glow 3s ease-in-out infinite;
+}
+
+@keyframes badge-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(6, 182, 212, 0.6), 0 0 30px rgba(168, 85, 247, 0.3);
+    }
+}
+
+/* Product logos with subtle pulse */
+.product-logo {
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 0 10px rgba(6, 182, 212, 0.2));
+    animation: product-logo-pulse 6s ease-in-out infinite;
+}
+
+@keyframes product-logo-pulse {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 10px rgba(6, 182, 212, 0.2));
+        transform: scale(1);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 20px rgba(6, 182, 212, 0.3));
+        transform: scale(1.02);
+    }
+}
+
+.premium-section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #06b6d4 0%, #a855f7 50%, #ec4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 40px rgba(6, 182, 212, 0.3);
+}
+
+.premium-section-description {
+    font-size: 1.125rem;
+    color: #cbd5e1;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* =========================================
+   CORE TECHNOLOGY GRID
+   ========================================= */
+
+.core-tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.core-tech-card {
+    position: relative;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, rgba(15, 23, 42, 0.95) 100%);
+    border: 1px solid rgba(6, 182, 212, 0.2);
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.core-tech-card:hover {
+    border-color: #06b6d4;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(6, 182, 212, 0.2);
+}
+
+.core-tech-number {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 4rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, transparent 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+}
+
+.core-tech-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #06b6d4 0%, #a855f7 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.core-tech-icon svg {
+    width: 28px;
+    height: 28px;
+    color: white;
+}
+
+.core-tech-label {
+    font-size: 0.75rem;
+    color: #06b6d4;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.core-tech-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 1rem;
+}
+
+.core-tech-description {
+    color: #94a3b8;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   PRODUCT SHOWCASE SECTIONS
+   ========================================= */
+
+.product-showcase {
+    padding: 6rem 0;
+    position: relative;
+}
+
+.product-showcase-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.product-logo-container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.product-logo {
+    max-width: 300px;
+    height: auto;
+    animation: reactor-pulse 4s ease-in-out infinite;
+}
+
+.product-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.product-feature-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(6, 182, 212, 0.2);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.product-feature-card:hover {
+    background: rgba(6, 182, 212, 0.05);
+    border-color: #06b6d4;
+    transform: translateX(5px);
+}
+
+.product-feature-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #06b6d4 0%, #a855f7 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.product-feature-icon svg {
+    width: 20px;
+    height: 20px;
+    color: white;
+}
+
+.product-feature-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #f8fafc;
+    margin-bottom: 0.5rem;
+}
+
+.product-feature-description {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 1024px) {
+    .premium-section-title {
+        font-size: 2.5rem;
+    }
+
+    .product-showcase-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .constellation-node {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        margin: 1rem auto;
+    }
+
+    .constellation-node::before {
+        display: none;
+    }
+
+    .constellation-map {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .premium-section-title {
+        font-size: 2rem;
+    }
+
+    .premium-section-description {
+        font-size: 1rem;
+    }
+
+    .core-tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .glass-card {
+        padding: 1.5rem;
+    }
+
+    .product-logo {
+        max-width: 200px;
+    }
+}
+
+/* =========================================
+   CTA BUTTONS (PREMIUM)
+   ========================================= */
+
+.btn-premium {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #06b6d4 0%, #a855f7 100%);
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-premium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-premium:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(6, 182, 212, 0.4);
+}
+
+.btn-premium:hover::before {
+    left: 100%;
+}
+
+.btn-premium svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.btn-premium:hover svg {
+    transform: translateX(5px);
+}
+
+.btn-outline-premium {
+    background: transparent;
+    border: 2px solid #06b6d4;
+    color: #06b6d4;
+}
+
+.btn-outline-premium:hover {
+    background: rgba(6, 182, 212, 0.1);
+    border-color: #a855f7;
+    color: #a855f7;
+}
