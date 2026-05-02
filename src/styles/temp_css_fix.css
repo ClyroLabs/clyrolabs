@@ -491,3 +491,95 @@
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
 }
+
+/* =========================================
+   UTILITY CLASSES - INLINE STYLE REPLACEMENTS
+   ========================================= */
+
+/* Section padding utility */
+.section-padding-lg {
+    padding: 8rem 0;
+}
+
+/* Margin utilities */
+.mb-4rem {
+    margin-bottom: 4rem;
+}
+
+.mb-3rem {
+    margin-bottom: 3rem;
+}
+
+.mt-4rem {
+    margin-top: 4rem;
+}
+
+.mt-3rem {
+    margin-top: 3rem;
+}
+
+.mt-2rem {
+    margin-top: 2rem;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Grid layout utilities */
+.grid-auto-fit-280 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.grid-auto-fit-300 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+/* Flex container utilities */
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-center-wrap {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Typography utilities for hero subtitle */
+.hero-subtitle-small {
+    font-size: 0.65em;
+    font-weight: 600;
+}
+
+/* Core Tech Section Title */
+.core-section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.core-section-description {
+    font-size: 1rem;
+}
+
+/* Agent Core text gradient */
+.text-gradient-agent-core {
+    background: linear-gradient(135deg, #06b6d4 0%, #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Fluorescent blink colors */
+.text-light {
+    color: #f8fafc;
+}

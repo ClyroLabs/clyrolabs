@@ -57,8 +57,7 @@
                     <a href="#estudio" class="header-nav-link">Estúdio App's</a>
                     <a href="#sobre" class="header-nav-link">Sobre</a>
                     <span class="nav-divider"></span>
-                    <a href="https://clyromed.vercel.app/" target="_blank" rel="noopener noreferrer"
-                        class="header-nav-link header-nav-highlight header-nav-clyro-med">
+                    <a class="header-nav-link header-nav-highlight header-nav-clyro-med nav-highlight-disabled">
                         <span class="nav-highlight-dot"></span>
                         Clyro Med
                     </a>
@@ -66,6 +65,11 @@
                         class="header-nav-link header-nav-highlight header-nav-mobipass">
                         <span class="nav-highlight-dot"></span>
                         MobiPass
+                    </a>
+                    <a href="https://quantum.clyrolabs.tech" target="_blank" rel="noopener noreferrer"
+                        class="header-nav-link header-nav-highlight header-nav-quantum">
+                        <span class="nav-highlight-dot"></span>
+                        <span class="quantum-text">Clyro Quantum</span>
                     </a>
                 </nav>
 
@@ -94,7 +98,7 @@
     <!-- Hero Section -->
     <section class="hero" id="inicio">
         <!-- Background Video -->
-        <video class="hero-video" autoplay muted loop playsinline>
+        <video class="hero-video" autoplay muted loop>
             <source src="/clyroengineia.mp4" type="video/mp4">
             Seu navegador não suporta vídeos HTML5.
         </video>
@@ -112,7 +116,7 @@
                 </span>
                 <h1 class="hero-title animate-fade-up delay-1">
                     Arquitetura de<br><span class="text-gradient">Inteligência Híbrida:</span><br><span
-                        style="font-size: 0.65em; font-weight: 600;">Onde a Inteligência encontra a Criatividade
+                        class="hero-subtitle-small">Onde a Inteligência encontra a Criatividade
                         humana</span>
                 </h1>
                 <p class="hero-description animate-fade-up delay-2">
@@ -211,7 +215,7 @@
     </section>
 
     <!-- CORE TECHNOLOGY: O Motor Clyro -->
-    <section class="deep-space-section" id="core-technology" style="padding: 8rem 0;">
+    <section class="deep-space-section section-padding-lg" id="core-technology">
         <div class="container">
             <div class="premium-section-header animate-fade-up">
                 <span class="premium-section-badge">
@@ -231,15 +235,14 @@
             </div>
 
             <!-- Vantagem da Entrega Imediata -->
-            <div class="blueprint-container animate-fade-up delay-1" style="margin-bottom: 4rem;">
+            <div class="blueprint-container animate-fade-up delay-1 mb-4rem">
                 <div class="tech-badge">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                     </svg>
                     A Vantagem da Entrega Imediata
                 </div>
-                <div
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div class="grid-auto-fit-280">
                     <div class="glass-card">
                         <div class="glass-card-icon">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -276,13 +279,12 @@
             </div>
 
             <!-- Clyro Agent Core: A Orquestração -->
-            <div class="premium-section-header animate-fade-up" style="margin-bottom: 3rem;">
-                <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem;">
-                    <span class="fluorescent-blink"
-                        style="background: linear-gradient(135deg, #06b6d4 0%, #a855f7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Clyro
-                        Agent Core:</span> <span class="fluorescent-blink" style="color: #f8fafc;">A Orquestração</span>
+            <div class="premium-section-header animate-fade-up mb-3rem">
+                <h3 class="core-section-title">
+                    <span class="fluorescent-blink text-gradient-agent-core">Clyro
+                        Agent Core:</span> <span class="fluorescent-blink text-light">A Orquestração</span>
                 </h3>
-                <p class="premium-section-description" style="font-size: 1rem;">
+                <p class="premium-section-description core-section-description">
                     O cérebro da operação é o Agent Core, um orquestrador multimodal.
                 </p>
             </div>
@@ -348,8 +350,7 @@
             </div>
 
             <!-- CTAs -->
-            <div class="animate-fade-up delay-3"
-                style="display: flex; gap: 1rem; justify-content: center; margin-top: 4rem; flex-wrap: wrap;">
+            <div class="animate-fade-up delay-3 flex-center-wrap mt-4rem">
                 <a href="#conheca-clyro" class="btn-premium">
                     Explorar o Ecossistema
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -365,7 +366,7 @@
     </section>
 
     <!-- HOLDING STRUCTURE: O Ecossistema -->
-    <section class="deep-space-section" id="conheca-clyro" style="padding: 8rem 0;">
+    <section class="deep-space-section section-padding-lg" id="conheca-clyro">
         <div class="container">
             <div class="premium-section-header animate-fade-up">
                 <span class="premium-section-badge">
@@ -463,7 +464,7 @@
             </div>
 
             <!-- CTA -->
-            <div class="animate-fade-up delay-2" style="display: flex; justify-content: center; margin-top: 4rem;">
+            <div class="animate-fade-up delay-2 flex-center mt-4rem">
                 <a href="#clyro-med" class="btn-premium">
                     Explorar Produtos
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -635,7 +636,7 @@
             </div>
 
             <!-- CTA -->
-            <div class="animate-fade-up delay-2" style="display: flex; justify-content: center; margin-top: 3rem;">
+            <div class="animate-fade-up delay-2 flex-center mt-3rem">
                 <a href="https://clyromed.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-premium">
                     Acessar Clyro Med
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -655,15 +656,14 @@
                     <img src="/images/mobipass-logo.png" alt="MobiPass Logo" class="product-logo">
                 </div>
                 <h2 class="premium-section-title">
-                    MobiPass | Passaporte de Mobilidade Global
+                    <span style="background: linear-gradient(90deg, #06b6d4, #38bdf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Mobi</span>Pass | Passaporte de Mobilidade Global
                 </h2>
                 <p class="premium-section-description">
                     Revolucionando a mobilidade urbana com tecnologia de ponta e experiência premium.
                 </p>
             </div>
 
-            <div class="product-features-grid animate-fade-up delay-1"
-                style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); max-width: 1000px; margin: 2rem auto;">
+            <div class="product-features-grid grid-cols-3 animate-fade-up delay-1">
                 <!-- MaaS Private-First -->
                 <div class="product-feature-card">
                     <div class="product-feature-icon">
@@ -708,7 +708,7 @@
             </div>
 
             <!-- CTA -->
-            <div class="animate-fade-up delay-2" style="display: flex; justify-content: center; margin-top: 3rem;">
+            <div class="animate-fade-up delay-2 flex-center mt-3rem">
                 <a href="https://mobipassinvestors.clyrolabs.tech" target="_blank" rel="noopener noreferrer"
                     class="btn-premium">
                     Conhecer MobiPass
@@ -1178,6 +1178,9 @@
 
             <div class="footer-bottom">
                 <p class="copyright">&copy; 2026 Clyro Labs. Todos os direitos reservados.</p>
+                <p class="footer-cnpj">
+                    CNPJ: <a href="https://cnpj.biz/65950163000180" target="_blank" rel="noopener noreferrer" class="cnpj-link">65.950.163/0001-80</a>
+                </p>
             </div>
         </div>
     </footer>
