@@ -3533,13 +3533,40 @@ body {
 
 /* === Credibility Bar === */
 .credibility-bar {
-    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
     padding: 0.85rem 1.5rem;
     background: linear-gradient(90deg, rgba(6, 182, 212, 0.05), rgba(168, 85, 247, 0.05));
     border: 1px solid rgba(6, 182, 212, 0.2);
     border-radius: 0.5rem;
+    width: 100%;
 }
 
+/* ícone SVG tech-lock — fora do gradiente */
+.credibility-lock-icon {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    color: #22d3ee;
+    width: 18px;
+    height: 18px;
+    filter: drop-shadow(0 0 4px rgba(6, 182, 212, 0.5));
+    animation: lock-pulse 3s ease-in-out infinite;
+}
+
+.credibility-lock-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+@keyframes lock-pulse {
+    0%, 100% { filter: drop-shadow(0 0 4px rgba(6, 182, 212, 0.5)); opacity: 1; }
+    50%       { filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.85)); opacity: 0.85; }
+}
+
+/* texto com shimmer — isolado */
 .credibility-text {
     font-size: 0.78rem;
     font-weight: 500;
@@ -3553,7 +3580,7 @@ body {
 }
 
 @keyframes credibility-shimmer {
-    0% { background-position: 0% center; }
+    0%   { background-position: 0% center; }
     100% { background-position: 200% center; }
 }
 
