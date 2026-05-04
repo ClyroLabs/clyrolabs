@@ -1282,6 +1282,7 @@
     .product-features-grid.grid-cols-3 {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .product-features-grid.grid-cols-3 .product-feature-card:last-child {
         grid-column: 1 / -1;
         max-width: 50%;
@@ -1459,4 +1460,32 @@
     background: rgba(6, 182, 212, 0.1);
     border-color: #a855f7;
     color: #a855f7;
+}
+
+/* About Section CTA */
+.section-cta-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.pitch-deck-btn {
+    background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%) !important;
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.4), 0 0 40px rgba(59, 130, 246, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 1.2rem 2.5rem !important;
+    font-size: 1.1rem !important;
+    letter-spacing: 0.5px;
+}
+
+.pitch-deck-btn:hover {
+    background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%) !important;
+    transform: translateY(-5px) scale(1.05) !important;
+    box-shadow: 0 15px 35px rgba(6, 182, 212, 0.5), 0 0 50px rgba(59, 130, 246, 0.3) !important;
+}
+
+.pitch-deck-btn svg {
+    margin-right: 0.5rem;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
 }
