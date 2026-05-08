@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="/src/styles/index.css">
     <link rel="stylesheet" href="/src/styles/temp_css_fix.css">
     <link rel="stylesheet" href="/src/styles/premium-sections.css">
+    <link rel="stylesheet" href="/src/styles/language-selector.css">
 </head>
 
 <body>
@@ -51,11 +52,11 @@
 
                 <!-- Navigation -->
                 <nav class="header-nav" id="nav-menu">
-                    <a href="#inicio" class="header-nav-link">Início</a>
-                    <a href="#conheca-clyro" class="header-nav-link">Conheça a Clyro</a>
-                    <a href="#solucoes" class="header-nav-link">Soluções</a>
-                    <a href="#estudio" class="header-nav-link">Estúdio App's</a>
-                    <a href="#sobre" class="header-nav-link">Sobre</a>
+                    <a href="#inicio" class="header-nav-link" data-i18n="nav_inicio">Início</a>
+                    <a href="#conheca-clyro" class="header-nav-link" data-i18n="nav_conheca">Conheça a Clyro</a>
+                    <a href="#solucoes" class="header-nav-link" data-i18n="nav_solucoes">Soluções</a>
+                    <a href="#estudio" class="header-nav-link" data-i18n="nav_estudio">Estúdio App's</a>
+                    <a href="#sobre" class="header-nav-link" data-i18n="nav_sobre">Sobre</a>
                     <span class="nav-divider"></span>
                     <a class="header-nav-link header-nav-highlight header-nav-clyro-med nav-highlight-disabled">
                         <span class="nav-highlight-dot"></span>
@@ -75,7 +76,7 @@
 
                 <!-- CTA Button -->
                 <div class="header-cta">
-                    <a href="#contato" class="header-cta-btn">
+                    <a href="#contato" class="header-cta-btn" data-i18n="cta_start">
                         Começar Agora
                     </a>
                 </div>
@@ -115,18 +116,18 @@
                     Bem-vindo ao Futuro da Tecnologia
                 </span>
                 <h1 class="hero-title animate-fade-up delay-1">
-                    Arquitetura de<br><span class="text-gradient">Inteligência Híbrida:</span><br><span
-                        class="hero-subtitle-small">Onde a Inteligência encontra a Criatividade
+                    <span data-i18n="hero_title_1">Arquitetura de</span><br><span class="text-gradient" data-i18n="hero_title_2">Inteligência Híbrida:</span><br><span
+                        class="hero-subtitle-small" data-i18n="hero_subtitle">Onde a Inteligência encontra a Criatividade
                         humana</span>
                 </h1>
-                <p class="hero-description animate-fade-up delay-2">
+                <p class="hero-description animate-fade-up delay-2" data-i18n="hero_desc">
                     A Clyro Labs não é apenas uma desenvolvedora. Somos uma <strong>Holding de Tecnologia</strong> e um
                     motor de <strong>Entrega Imediata</strong>. Combinamos o poder de processamento da IA Generativa com
                     algoritmos prontos para o futuro quântico (<strong>Quantum-Ready</strong>), oferecendo soluções
                     modulares que fundem Design, Tecnologia e Entretenimento em escala global.
                 </p>
                 <div class="hero-actions animate-fade-up delay-3">
-                    <a href="#conheca-clyro" class="btn btn-primary btn-lg">
+                    <a href="#conheca-clyro" class="btn btn-primary btn-lg" data-i18n="hero_btn_explore">
                         Explorar o Ecossistema
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -134,7 +135,7 @@
                             <path d="m12 5 7 7-7 7" />
                         </svg>
                     </a>
-                    <a href="#core-technology" class="btn btn-outline btn-lg">Acessar Clyro Agent Core</a>
+                    <a href="#core-technology" class="btn btn-outline btn-lg" data-i18n="hero_btn_agent">Acessar Clyro Agent Core</a>
                 </div>
             </div>
 
@@ -1460,6 +1461,7 @@
     </div>
 
     <!-- Scripts -->
+    <script type="module" src="/src/js/i18n.js"></script>
     <script type="module" src="/src/js/main.js"></script>
 </body>
 
