@@ -503,23 +503,8 @@ body {
     }
 }
 
-/* Compact Navigation for Medium Desktops */
-@media (min-width: 1200px) and (max-width: 1350px) {
-    .header-nav {
-        gap: 0.75rem;
-    }
-    .header-nav-link {
-        font-size: 0.75rem !important;
-        letter-spacing: 0.08em !important;
-    }
-    .header-nav-highlight {
-        padding: 0.35rem 0.65rem;
-        gap: 0.3rem;
-    }
-    .nav-divider {
-        margin: 0;
-    }
-}
+/* Compact Navigation for Medium Desktops - MOVED TO THE BOTTOM TO PREVENT BUG OVERRIDE */
+
 
 .header-cta-btn {
     background: linear-gradient(to right, #2563eb, #06b6d4);
@@ -3684,5 +3669,41 @@ body {
     }
     .acceleration-title {
         font-size: 1.6rem;
+    }
+}
+
+/* Compact Navigation for Medium Desktops (1200px - 1400px) - DEFINITIVE RESPONSIVENESS FIX */
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .header-nav {
+        gap: 0.6rem !important;
+    }
+    .header-nav-link {
+        font-size: 0.72rem !important;
+        letter-spacing: 0.06em !important;
+    }
+    .header-nav-highlight {
+        padding: 0.3rem 0.5rem !important;
+        gap: 0.2rem !important;
+        font-size: 0.72rem !important;
+    }
+    .nav-highlight-dot {
+        width: 6px !important;
+        height: 6px !important;
+    }
+    .nav-divider {
+        margin: 0 0.05rem !important;
+    }
+    .language-selector {
+        margin-right: 0.75rem !important;
+    }
+    .header-cta {
+        margin-left: 0.5rem !important;
+    }
+    .header-cta-btn {
+        padding: 0.35rem 0.8rem !important;
+        font-size: 0.75rem !important;
+    }
+    .header-logo-wrapper {
+        margin-right: 0.5rem !important;
     }
 }
