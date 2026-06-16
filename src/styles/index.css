@@ -3538,9 +3538,18 @@ body {
 }
 
 .program-icon-amcham {
-    background: rgba(59, 130, 246, 0.12);
-    border: 1px solid rgba(16, 185, 129, 0.28);
-    color: rgba(59, 130, 246, 0.8);
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 0.6rem 0.8rem;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.program-icon-amcham .program-logo-img {
+    width: 72px;
+    height: 24px;
+    object-fit: contain;
+    border-radius: 0;
+    animation: none;
 }
 
 .program-card-content {
