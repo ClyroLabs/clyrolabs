@@ -3485,16 +3485,16 @@ body {
                 0 12px 40px rgba(6, 182, 212, 0.15);
 }
 
-.program-card:has(.program-icon-emerge):hover {
-    border-color: rgba(134, 239, 172, 0.45);
-    box-shadow: 0 0 0 1px rgba(134, 239, 172, 0.12),
-                0 12px 40px rgba(134, 239, 172, 0.12);
+.program-card:has(.program-icon-founders):hover {
+    border-color: rgba(245, 158, 11, 0.45);
+    box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.12),
+                0 12px 40px rgba(245, 158, 11, 0.15);
 }
 
-.program-card:has(.program-icon-unimed):hover {
-    border-color: rgba(21, 128, 61, 0.5);
-    box-shadow: 0 0 0 1px rgba(21, 128, 61, 0.12),
-                0 12px 40px rgba(21, 128, 61, 0.15);
+.program-card:has(.program-icon-amcham):hover {
+    border-color: rgba(59, 130, 246, 0.45);
+    box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.12),
+                0 12px 40px rgba(59, 130, 246, 0.15);
 }
 
 /* icon transition baseline */
@@ -3531,16 +3531,16 @@ body {
     color: rgba(6, 182, 212, 0.8);
 }
 
-.program-icon-emerge {
-    background: rgba(134, 239, 172, 0.12);
-    border: 1px solid rgba(134, 239, 172, 0.28);
-    color: rgba(134, 239, 172, 0.8);
+.program-icon-founders {
+    background: rgba(245, 158, 11, 0.12);
+    border: 1px solid rgba(245, 158, 11, 0.28);
+    color: rgba(245, 158, 11, 0.8);
 }
 
-.program-icon-unimed {
-    background: rgba(21, 128, 61, 0.15);
-    border: 1px solid rgba(21, 128, 61, 0.35);
-    color: rgba(21, 128, 61, 0.8);
+.program-icon-amcham {
+    background: rgba(59, 130, 246, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.28);
+    color: rgba(59, 130, 246, 0.8);
 }
 
 .program-card-content {
