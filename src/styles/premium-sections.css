@@ -825,6 +825,13 @@
         margin-top: -230px;
     }
 
+    .orbital-path-6 {
+        width: 340px;
+        height: 340px;
+        margin-left: -170px;
+        margin-top: -170px;
+    }
+
     .orbital-planet-inner {
         width: 80px;
         height: 80px;
@@ -833,6 +840,24 @@
     .orbital-planet-logo {
         width: 55px;
         height: 55px;
+    }
+}
+
+@media (max-width: 520px) {
+    .orbital-constellation-container {
+        transform: scale(0.78);
+        transform-origin: center center;
+        margin: 1rem 0;
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 400px) {
+    .orbital-constellation-container {
+        transform: scale(0.68);
+        transform-origin: center center;
+        margin: 0;
+        min-height: 420px;
     }
 }
 

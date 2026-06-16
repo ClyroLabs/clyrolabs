@@ -109,20 +109,53 @@ class I18nManager {
         const langData = translations[this.currentLang];
         if (!langData) return;
 
-        // Data attributes for elements that need translation
-        // We will add [data-i18n="key"] to HTML elements
+        // Update basic text content
         const elements = document.querySelectorAll('[data-i18n]');
         elements.forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (langData[key]) {
+                // If it has children (icons etc), we might need to be careful
+                // For now, let's assume if it's a simple key we replace innerHTML
                 el.innerHTML = langData[key];
             }
         });
 
-        // Specific cases for text with icons
+        // Update placeholders
+        const inputs = document.querySelectorAll('[data-i18n-placeholder]');
+        inputs.forEach(input => {
+            const key = input.getAttribute('data-i18n-placeholder');
+            if (langData[key]) {
+                input.placeholder = langData[key];
+            }
+        });
+
+        // Update meta tags and other content attributes
+        const metaElements = document.querySelectorAll('[data-i18n-content]');
+        metaElements.forEach(el => {
+            const key = el.getAttribute('data-i18n-content');
+            if (langData[key]) {
+                el.setAttribute('content', langData[key]);
+            }
+        });
+
+        // Update document title if key exists
+        if (langData['site_title']) {
+            document.title = langData['site_title'];
+        }
+
+        // Special handling for elements with nested structure (like icons)
+        this.handleSpecialElements(langData);
+    }
+
+    handleSpecialElements(langData) {
+        // Hero badge (preserving the emoji/icon if it's there, but we added i18n to span mostly)
         const heroBadge = document.querySelector('.hero-badge');
         if (heroBadge && langData['hero_badge']) {
-            heroBadge.childNodes[2].textContent = ` ${langData['hero_badge']}`;
+            // Find the text node after the emoji
+            const textNode = Array.from(heroBadge.childNodes).find(node => node.nodeType === 3 && node.textContent.trim().length > 0);
+            if (textNode) {
+                textNode.textContent = ` ${langData['hero_badge']}`;
+            }
         }
     }
 }
